@@ -1,7 +1,26 @@
-stuff = raw_input('> ')
-words = stuff.split()
+def scan(userinput):
+    words = userinput.split()
+    result = []
+    for word in words:
+        result.append(classify(word))
+    return result
 
-first_word = ('verb', 'go')
-second_word = ('direction', 'north')
-third_word = ('direction', 'west')
-sentence = [first_word, second_word, third_word]
+def classify(word):
+    if word in ['north', 'south', 'east']:
+        return ('direction', word)
+    elif word in ['go', 'kill', 'eat']:
+        return ('verb', word)
+    elif word in ['the, 'in', 'of']:
+        return ('stop', word)
+    elif word in ['bear', 'princess']:
+        return ('noun', word)
+    elif word in ['', '', '']:
+        return ('number', word)
+    else:
+#program reacts to error instead of just error
+        try:
+            thenumber = int(word)
+            return('number', thenumber)
+        except ValueError:
+            # word is not a number
+            return('error', word)
