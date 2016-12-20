@@ -1,0 +1,27 @@
+body {
+  background-color: rgb(64, 255, 0);
+}
+
+pre {
+   text-align: center;
+}
+
+h1 {
+  text-align: center;
+  color:white;
+  background-color: rgb(19, 77, 0);
+  text-transform: uppercase;
+  text-decoration: underline;
+}
+
+p1 {
+  font-family: "Times New Roman", Times, serif;
+  font-style: normal;
+  color:black;
+  text-align: center;
+}
+
+p2 {
+  text-align: right;
+  font-weight: bold;
+}

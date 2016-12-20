@@ -13,19 +13,19 @@ class Scene(object):
         return self.paths.get(direction, default_direction)
 
     def add_paths(self, paths):
-
         self.paths.update(paths)
 
 # Create the scenes of the game
 central_corridor = Scene("Central Corridor", "central_corridor",
 """
 The Gothons of Planet Percal #25 have invaded your ship and destroyed
-your entire crew. You are the last surviving member (oh noes!) and your
+your entire crew.
+You are the last surviving member (oh noes!) and your
 last mission is to get the neutron destruct bomb from the Weapons Armory,
 put it in the bridge, and blow up the ship after getting into an escape pod.
-You're now running down the central corridor to the Weapons Armory when a
-Gothon hops out in an evil clown costume filled with hate. He's blocking the door
-to the Armory and about to pull a weapon to blast you.
+You're now running down the central corridor to the Weapons Armory
+when a Gothon hops out in an evil clown costume filled with hate.
+He's blocking the door to the Armory and about to pull a weapon to blast you.
 """)
 
 laser_weapon_armory = Scene("Laser Weapon Armory", "laser_weapon_armory",
@@ -85,6 +85,7 @@ but there's a crack in the hull. Uh oh. The pod implodes and you with it.
 """)
 
 generic_death = Scene("Death...", "death", "You died.")
+
 # Define the action commands available in each scene
 escape_pod.add_paths({
     '2': the_end_winner,
